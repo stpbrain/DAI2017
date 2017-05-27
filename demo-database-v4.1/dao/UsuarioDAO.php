@@ -33,10 +33,13 @@ class UsuarioDAO implements GenericDAO {
         $v_mail = $registro->getEmail();
         $sent->bindParam(':d_email', $v_mail);
         
-        
-        if(is_null($q))
+        $sendEx = $sent->execute();
+        echo "holas voy a mostrar sendEx";
+        echo $sendEx;
+        if(!is_null($q))
         {
             echo "usuario :mail ya esta registrado";
+            return 
         }
         
         /*@var $registro Usuario */
