@@ -20,9 +20,9 @@ class UsuarioController {
         
         $usuario = new Usuario();        
         $usuario->setEmail($email);
-        $usuario->setClave($clave); // cambio para eliminar el password hash
-       // $hash = password_hash($clave, PASSWORD_BCRYPT);
-        //$usuario->setClave($hash);
+        
+        $hash = password_hash($clave, PASSWORD_BCRYPT);
+        $usuario->setClave($hash);
         
         $conexion = ConexionDB::getConexion();
         $daoUsuario= new UsuarioDAO($conexion);

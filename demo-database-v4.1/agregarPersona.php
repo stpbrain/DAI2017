@@ -27,52 +27,61 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <link href="css/agregarStyle.css" rel="stylesheet" type="text/css">
+        <title>Ingreso de Persona</title>
+		 <script src="js/agregaPersona.js"></script>	 
+                 
+                 
     </head>
     <body>
         <div id="contenedor">
             <header>
-                <h1>Registrar Persona</h1>
+                <h1>Agregar Persona</h1>
             </header>
             <div id="contenido">
                 <div class="formulario">
-                    <form action="agregarPersona.php" method="POST">
+                    <form id="formulario" action="agregarPersona.php" method="POST">
                         <fieldset>
-                            <legend>Datos de la Persona</legend>
                             <div class="campo">
-                                <label>RUT</label>
-                                <input type="text" name="rut" required />
+                                <label>RUT(sin DV)</label>
+                                <input type="text" name="rut"  id="rut" />  <a id="error_rut"></a>
                             </div>
                             <div class="campo">
                                 <label>Nombre</label>
-                                <input type="text" name="nombre" required />
+                                <input type="text" name="nombre" id="nombre"   />  <a id="error_nombre"></a>
                             </div>
                             <div class="campo">
                                 <label>Apellido</label>
-                                <input type="text" name="apellido" required />
+                                <input type="text" name="apellido"   id="apellido" />  <a id="error_apellido"></a>
                             </div>
                             <div class="campo">
                                 <label>Fecha Nacimiento</label>
-                                <input type="date" name="fechaNacimiento" required />
+                                <input type="date" name="fechaNacimiento" id="fechaNacimiento" />  <a id="error_fechaNacimiento"></a>
                             </div>
                             <div class="campo">
                                 <label>E-Mail</label>
-                                <input type="email" name="email" required />
+                                <input type="email" name="email" id="email" /> <a id="error_mail"></a>
                             </div>
                         </fieldset>
                         <div class="botonera">
-                            <input type="submit" name="enviar" value="Registrar" />
+                            <input id="registrar" type="button" onclick="validaFormulario();" value="Registrar" center/>
+                            <input id="limpiar" type="button" onclick="document.location.reload();" value="Limpiar" />
                         </div>
                     </form>
+                    
                 </div>
-                <ul>
-                    <li>
-                        <a href="index.php">Inicio</a>
-                    </li>
-                </ul>
             </div>
+            
+            <ul>
+                <li>
+                    <input id="inicio" type="button" onclick="window.location.href=('index.php')" center value="Inicio" />
+                </li>
+            </ul>
+            
+            
+            
             <footer>
-                <p>Diseño de Aplicaciones para Internet</p>
+                <p>Empresas XYZ S.A.</p>
                 <?php
                     if(isset($_SESSION["usuario"])) {
                         echo '<p><b>Usuario autenticado</b>: '.$_SESSION["usuario"].'</p>';

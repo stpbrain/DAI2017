@@ -1,0 +1,71 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, blue, red, green);
+}
+
+#inicio{
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    color: white;
+    background-color: #078ee4;
+    font-size: 1.4em;
+    border-radius: 15px;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    text-align: center;
+    color: black;
+    font-family: "comic sans ms", Times, serif;
+    background-color: yellow;
+    border-bottom: 3px solid black;
+}
+
+table{
+    position: absolute;
+    top: 20%;
+    right: 20%;
+    border: 5px solid yellow;
+    background-color: orangered;
+    width: 800px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    
+}
+
+th{
+    background: linear-gradient(orangered, white);
+    font-family: "comic sans ms", times,serif;
+    color: black;
+    font-size:  1.2em;
+    border: 2px solid black;
+}
+
+tr{
+    border: 2px solid yellow;
+}
+td.list{
+    border: 2px solid yellow;
+    font-family: "comic sans ms", Times, serif;
+    font-size: 0.4cm;
+    background: linear-gradient(to right, orangered, white);
+    color: black;
+}
+
+
+
+footer{
+    width: 100%;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    border-top: 3px solid black;
+    font-family: "comic sans ms", Times, serif;
+    font-size: 0.7cm;
+}

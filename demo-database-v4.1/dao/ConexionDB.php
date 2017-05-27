@@ -8,7 +8,7 @@
 class ConexionDB {
 
     const HOST = "localhost";
-    const DBNAME = "Tamho_daho";
+    const DBNAME = "dai5501_demodb";
     const PORT = "3306";
     const USER = "root";
     const PASS = "";

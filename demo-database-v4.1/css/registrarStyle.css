@@ -1,0 +1,85 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, blue, red, green);
+}
+
+a{
+    font-size: 0.4cm;
+    color: red;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+    top: 0%;
+    text-align: center;
+    color: black;
+    font-family: "comic sans ms", Times, serif;
+    background-color: yellow;
+    border-bottom: 3px solid black;
+}
+
+fieldset{
+    text-align: right;
+    position: absolute;
+    top: 25%;
+    width: 600px;
+    right: 26%;
+    font-family: "comic sans ms", Times, serif;
+    font-size: 25px;
+    color: white;
+    border: 5px solid yellow;
+    background: linear-gradient(to right, orangered, white);
+    border-radius: 8px;
+    
+}
+
+label{
+    position: absolute;
+    left: 2%;
+}
+legend{
+    text-align: center;
+}
+
+.botonera{
+    position: absolute;
+    top: 63%;
+    left: 40%;
+}
+
+#registrar{
+    background-color: yellowgreen;
+    color: white;
+    border-radius: 15px;
+    font-size: 1.4em;
+}
+
+#limpiar{
+    background-color: yellow;
+    color: black;
+    border-radius: 15px;
+    font-size: 1.4em;
+}
+
+#inicio{
+    position: absolute;
+    top: 0%;
+    right: 2%;
+    color: white;
+    background-color: #078ee4;
+    font-size: 1.4em;
+    border-radius: 15px
+}
+
+footer{
+    width: 100%;
+    background-color: yellow;
+    position: absolute;
+    bottom: 0%;
+    text-align: center;
+    border-top: 3px solid black;
+    font-family: "comic sans ms", Times, serif;
+    font-size: 0.7cm;
+}

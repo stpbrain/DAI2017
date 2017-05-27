@@ -11,7 +11,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <link href="css/listarStyle.css" rel="stylesheet" type="text/css">
         <title>Listado de Personas</title>
+        
         
         <!-- https://code.jquery.com/jquery-3.2.1.js -->
         <script src="js/jquery-3.2.1.js" ></script>
@@ -56,6 +58,10 @@
         </script>
     </head>
     <body>
+        <header>
+                <h1>Listado de Personas</h1>
+        </header>
+        
         <table>
             <thead>
                 <tr>
@@ -68,7 +74,7 @@
             </thead>
             <tfoot>
                 <tr>
-                    <td colspan="5">
+                    <td class="list" colspan="5">
                         Listado de personas registradas
                     </td>
                 </tr>
@@ -93,13 +99,18 @@
         
         <ul>
             <li>
-                <a href="index.php">Inicio</a>
-                <?php
+                <input id="inicio" type="button" onclick="window.location.href=('index.php')" value="Inicio"/>
+            </li>
+        </ul>
+        <footer>
+            <p>Empresas XYZ S.A.</p>
+            <?php
                     if(isset($_SESSION["usuario"])) {
                         echo '<p><b>Usuario autenticado</b>: '.$_SESSION["usuario"].'</p>';
                     }
                 ?>
-            </li>
-        </ul>
+            
+        </footer>
+        
     </body>
 </html>

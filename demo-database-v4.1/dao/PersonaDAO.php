@@ -26,20 +26,6 @@ class PersonaDAO implements GenericDAO {
     }
 
     public function agregar($registro) {
-
-        // validar que persona exista
-        $q = "select rut from persona where rut = :rut";
-        $sent = $this->conexion->prepare($q);
-        if (mysql_num_rows($q) > 0)
-        {
-            echo  "persona ya registrada";
-            break;
-        }
-
-        $sent->execute();
-
-
-
         /*@var $registro Persona */
         
         $query = "INSERT INTO persona (rut,nombre,apellido,fecha_nacimiento, email) VALUES (:rut, :nombre, :apellido, :fecha_nacimiento, :email) ";

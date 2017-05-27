@@ -26,21 +26,19 @@ class UsuarioDAO implements GenericDAO {
     }
 
     public function agregar($registro) {
-        //valida si ya existe
+       //validacion si ya esta 
+        $q= "SELECT * FROM usuarios WHERE email=:d_mail";
         
-        $q ="select email from usuario u where u.email = :mail";
-        $result = mysql_query($q);
-        $sent = $this->conexion->prepare($q);
-
-        // valida si la lista de registros es mayor a 0, es por que ya existe, si es 0 lo crea
-        if (mysql_num_rows($result) > 0)
+        $sent = $this -> conexion ->prepare($q);
+        $v_mail = $registro->getEmail();
+        $sent->bindParam(':d_email', $v_mail);
+        
+        
+        if(is_null($q))
         {
-          echo  "usuario ya registrado  $q";
-          
-           //break;
+            echo "usuario :mail ya esta registrado";
         }
         
-
         /*@var $registro Usuario */
         
         $query = "INSERT INTO usuario (email, clave) VALUES (:email, :clave) ";
@@ -75,12 +73,6 @@ class UsuarioDAO implements GenericDAO {
         }
         
         return $usuario;
-    }
-
-    public function validarUsuario( )
-    {
-
-
     }
 
     public function eliminar($idRegistro) {

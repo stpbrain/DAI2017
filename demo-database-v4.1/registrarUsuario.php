@@ -11,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
        
        if($exito) {
            header("location: index.php");
-           return;               
+           return;
        } 
     }  
 }
@@ -21,7 +21,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <link href="css/registrarStyle.css" rel="stylesheet" type="text/css">
+        <title>Registro de Usuario</title>
+	    <script src="js/registrarUsuario.js" ></script>	
+            
     </head>
     <body>
         <div id="contenedor">
@@ -30,35 +33,36 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
             </header>
             <div id="contenido">
                 <div class="formulario">
-                    <form action="registrarUsuario.php" method="POST">
+                    <form action="registrarUsuario.php" method="POST" id="formulario">
                         <fieldset>
-                            <legend>Datos del usuario</legend>
                             <div class="campo">
                                 <label>E-Mail</label>
-                                <input type="email" name="email" required />
+                                <input type="email" name="email" id="email" /> <a id="error_mail"></a>
                             </div>
                             <div class="campo">
                                 <label>Clave</label>
-                                <input type="password" name="clave" required />
+                                <input type="password" name="clave" id="clave" /> <a id="error_clave"></a>
                             </div>    
                             <div class="campo">
                                 <label>Confirmar Clave</label>
-                                <input type="password" name="confirmacion" required />
+                                <input type="password" name="confirmacion" id="confirmacion" /> <a id="error_confirm_clave"></a>
                             </div>   
                         </fieldset>
                         <div class="botonera">
-                            <input type="submit" name="enviar" value="Registrar" />
+                            <input id="registrar" type="button" onclick="validaFormulario();" value="Registrar" center/>
+                            <input id="limpiar" type="button" onclick="document.location.reload();" value="Limpiar" />
                         </div>
                     </form>
                 </div>
                 <ul>
                     <li>
-                        <a href="index.php">Inicio</a>
+                        <input id="inicio" type="button" onclick="window.location.href=('index.php')" value="Inicio" />
+                        
                     </li>
                 </ul>
             </div>
             <footer>
-                <p>Diseño de Aplicaciones para Internet</p>
+                <p>Empresas XYZ S.A.</p>
                 <?php
                     if(isset($_SESSION["usuario"])) {
                         echo '<p><b>Usuario autenticado</b>: '.$_SESSION["usuario"].'</p>';
