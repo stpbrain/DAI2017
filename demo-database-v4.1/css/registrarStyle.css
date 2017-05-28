@@ -6,7 +6,7 @@ html,body{
 
 a{
     font-size: 0.4cm;
-    color: red;
+    color: red;    
 }
 
 header{
@@ -45,22 +45,22 @@ legend{
 
 .botonera{
     position: absolute;
-    top: 63%;
-    left: 40%;
+    bottom: 2%;
+    left: 35%;
 }
 
 #registrar{
     background-color: yellowgreen;
     color: white;
     border-radius: 15px;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 #limpiar{
     background-color: yellow;
     color: black;
     border-radius: 15px;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 #inicio{
@@ -74,12 +74,12 @@ legend{
 }
 
 footer{
-    width: 100%;
-    background-color: yellow;
     position: absolute;
     bottom: 0%;
-    text-align: center;
+    background-color: yellow;
+    width: 100%;
     border-top: 3px solid black;
-    font-family: "comic sans ms", Times, serif;
-    font-size: 0.7cm;
+    font-family: "comic sans ms";
+    font-size: 1.2em;
+    text-align: center;
 }

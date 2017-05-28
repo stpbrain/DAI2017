@@ -44,29 +44,41 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         <fieldset>
                             <div class="campo">
                                 <label>RUT(sin DV)</label>
-                                <input type="text" name="rut"  id="rut" />  <a id="error_rut"></a>
+                                <input type="text" name="rut"  id="rut" /> 
+                                <br>
+                                <a id="error_rut"></a>
                             </div>
                             <div class="campo">
                                 <label>Nombre</label>
-                                <input type="text" name="nombre" id="nombre"   />  <a id="error_nombre"></a>
+                                <input type="text" name="nombre" id="nombre"   />
+                                <br>
+                                <a id="error_nombre"></a>
                             </div>
                             <div class="campo">
                                 <label>Apellido</label>
-                                <input type="text" name="apellido"   id="apellido" />  <a id="error_apellido"></a>
+                                <input type="text" name="apellido"   id="apellido" />  
+                                <br>
+                                <a id="error_apellido"></a>
                             </div>
                             <div class="campo">
                                 <label>Fecha Nacimiento</label>
-                                <input type="date" name="fechaNacimiento" id="fechaNacimiento" />  <a id="error_fechaNacimiento"></a>
+                                <input type="date" name="fechaNacimiento" id="fechaNacimiento" />  
+                                <br>
+                                <a id="error_fechaNacimiento"></a>
                             </div>
                             <div class="campo">
                                 <label>E-Mail</label>
-                                <input type="email" name="email" id="email" /> <a id="error_mail"></a>
+                                <input type="email" name="email" id="email" /> 
+                                <br>
+                                <a id="error_mail"></a>
                             </div>
-                        </fieldset>
-                        <div class="botonera">
+                            <br>
+                            <div class="botonera">
                             <input id="registrar" type="button" onclick="validaFormulario();" value="Registrar" center/>
                             <input id="limpiar" type="button" onclick="document.location.reload();" value="Limpiar" />
                         </div>
+                        </fieldset>
+                        
                     </form>
                     
                 </div>

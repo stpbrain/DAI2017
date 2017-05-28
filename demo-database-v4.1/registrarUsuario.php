@@ -37,21 +37,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         <fieldset>
                             <div class="campo">
                                 <label>E-Mail</label>
-                                <input type="email" name="email" id="email" /> <a id="error_mail"></a>
+                                <input type="email" name="email" id="email" /> 
+                                <br>
+                                <a id="error_mail"></a>
                             </div>
                             <div class="campo">
                                 <label>Clave</label>
-                                <input type="password" name="clave" id="clave" /> <a id="error_clave"></a>
+                                <input type="password" name="clave" id="clave" /> 
+                                <br>
+                                <a id="error_clave"></a>
                             </div>    
                             <div class="campo">
                                 <label>Confirmar Clave</label>
-                                <input type="password" name="confirmacion" id="confirmacion" /> <a id="error_confirm_clave"></a>
-                            </div>   
-                        </fieldset>
-                        <div class="botonera">
+                                <input type="password" name="confirmacion" id="confirmacion" /> 
+                                <br>
+                                <a id="error_confirm_clave"></a>
+                            </div>
+                            <br>
+                            <div class="botonera">
                             <input id="registrar" type="button" onclick="validaFormulario();" value="Registrar" center/>
                             <input id="limpiar" type="button" onclick="document.location.reload();" value="Limpiar" />
                         </div>
+                        </fieldset>
                     </form>
                 </div>
                 <ul>

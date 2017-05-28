@@ -4,72 +4,90 @@ html,body{
     background: linear-gradient(to right, blue, red, green);
 }
 
+header{
+    position: absolute;
+    top: 0%;
+    height: 25%;
+    background-color: yellow;
+    width: 100%;
+    border-bottom: 3px solid black;
+    font-family: "comic sans ms";
+    font-size: 1em;
+}
+
+h1,h2{
+    text-align: center;
+}
+
 #logo{
     position: absolute;
-    width: 15%;
-    top: 11%;
-    right: 20%;
+    top: 7%;
+    right: 23%;
+    height: 15%;
+}
+
+.botonera{
+    position: relative;
+    top: 0%;
+    right: 10px;
+    text-align: right;
+    border-radius: 15px;
+}
+
+#inicio, #listar, #agregar, #registrar{
+    color: white;
+    background-color: #078ee4;
+    font-size: 1.4em;
+    border-radius: 15px;
+}
+#login{
+    color: white;
+    background-color: yellowgreen;
+    font-size: 1.4em;
+    border-radius: 15px;
+}
+#logout{
+    color: white;
+    background-color: red;
+    font-size: 1.4em;
+    border-radius: 15px;
 }
 
 
-div.item{
-    width: 300px;
-    height: 300px;
-    display: block;
-    margin: auto;
-}
-
-div.botones{
-    padding-bottom: 50px;
-    margin-top: 0;
-    display: inline-block;
-    float: right;
-}
-
-div.h{
-    background: linear-gradient(to right, yellow, orange );
-    top: 50%;
-    height: 70%;
+footer{
+    position: absolute;
+    bottom: 0%;
+    background-color: yellow;
     width: 100%;
-    padding-top: 1.5cm;
-    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    font-family: "comic sans ms";
+    font-size: 1.2em;
     text-align: center;
-    color: black;
-    font-family: "comic sans ms", Times, serif;
 }
 
 #Carousel{
-    position: absolute;
-    width: 100%;
-    top: 32%;
-}
-
-footer{
-    width: 100%;
-    background-color: yellow;
-    color: black;
-    position: absolute;
-    bottom: 0%;
+    position: relative;
     text-align: center;
-    border-top: 3px solid black;
-    font-family: "comic sans ms", Times, serif;
-    font-size: 0.7cm;
+    top: 10em;
+    height: 25em;
 }
 
-#alan{
-    position: absolute;
-    width: 35%;
-    left: 3%;
-    top: 3%;
+.tarjetas{
+    position: relative;
+    left: 30em;
+    width: 40%;
+    border-radius: 15px;
+    background: linear-gradient(to right, orangered, yellow);
 }
 
-fieldset.alan{
-    position: absolute;
-    left: -20%;
-    border: 8px solid yellow;
-    width: 450px;
-    height: 200px;
-    background: linear-gradient(to right, orangered, white);
-    border-radius: 8px;
+#foto{
+    position: relative;
+    height: 16em;
+    
 }
 
+#nombre{
+    color: black;
+    font-size: 2.5em;
+    font-family: "comic sans ms", times, serif;
+}

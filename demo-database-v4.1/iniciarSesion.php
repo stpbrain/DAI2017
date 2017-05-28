@@ -39,40 +39,40 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
                         <fieldset id="field">
                             <div class="campo">
                                 <label>E-Mail</label>								
-                                <input type="email" name="email" id= "email" />
-								<a id="label_mensajeEmail"></a>								
+                                <input type="email" name="email" id= "email" /> 
+                                <br>
+                                <a id="label_mensajeEmail"></a>								
                             </div>
                             <div class="campo">
                                 <label>Clave</label>
                                 <input type="password" name="clave" id= "clave"  />
-								<a id="label_mensajePassword"></a>
+                                <br>
+                                <a id="label_mensajePassword"></a>
                             </div>
-           
-                            </div>  			
-                        </fieldset>
-                        
-                        <div class="botonera">
+                            <br>
+                            <div class="botonera">
                             <input id="acceder" type="button" name="enviar" value="Acceder" onclick='validaFormulario();' />
                             <input id="limpiar" type="button" onclick="document.location.reload();" value="Limpiar" />
                             <input id="salir" type="button" value="Salir" onclick="window.location.href='cerrarSesion.php'"/>
-                        </div>
+                            </div>
+                        </fieldset>  
                     </form>
-                </div>
+                </div>    
+            </div>
                 <ul>
                     <li>
                         <input id="inicio" type="button" onclick="window.location.href=('index.php')" center value="Inicio" />
                     </li>
                 </ul>
-            </div>
 			
-            <footer>
-                <p>Empresas XYZ S.A.</p>
-                <?php
-				     if(isset($_SESSION["usuario"])) {
-                        echo '<p><b>Usuario autenticado</b>: '.$_SESSION["usuario"].'</p>';
-                    }
-                ?>
-            </footer>
+                <footer>
+                    <p>Empresas XYZ S.A.</p>
+                    <?php
+                                         if(isset($_SESSION["usuario"])) {
+                            echo '<p><b>Usuario autenticado</b>: '.$_SESSION["usuario"].'</p>';
+                        }
+                    ?>
+                </footer>
         </div>
     </body>
 </html>

@@ -6,7 +6,12 @@ html,body{
 
 a{
     font-size: 0.4cm;
-    color: white;
+    color: red;
+}
+
+table{
+    position: absolute;
+    top: 50%;
 }
 
 header{
@@ -43,26 +48,26 @@ label{
     background-color: yellowgreen;
     color: white;
     border-radius: 15px;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 #limpiar{
     background-color: yellow;
     color: black;
     border-radius: 15px;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 #salir{
     background-color: red;
     color: yellow;
     border-radius: 15px;
-    font-size: 1.4em;
+    font-size: 0.8em;
 }
 
 .botonera{
     position: absolute;
-    top: 59%;
-    right: 40%;    
+    bottom: 1%;
+    right: 30%;    
 }
 
 #inicio{
@@ -77,13 +82,13 @@ label{
 
 
 footer{
-    width: 100%;
-    background-color: yellow;
     position: absolute;
     bottom: 0%;
-    text-align: center;
+    background-color: yellow;
+    width: 100%;
     border-top: 3px solid black;
-    font-family: "comic sans ms", Times, serif;
-    font-size: 0.7cm;
+    font-family: "comic sans ms";
+    font-size: 1.2em;
+    text-align: center;
 }
 
