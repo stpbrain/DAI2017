@@ -13,19 +13,28 @@ class UsuarioController {
     
     public static function registrarUsuario($email, $clave, $confirmacionClave) {
         
-        // validar que los datos sean válidos        
+        // validar que los datos sean válidos  
+        $usuario = new Usuario();  
+         $conexion = ConexionDB::getConexion();
+        $daoUsuario= new UsuarioDAO($conexion);      
         if($clave != $confirmacionClave) {
             return false;
         }
+        if($daoUsuario->agregar($usuario) == true)
+        {
+            echo "usuario registrado";
+
+        }
         
-        $usuario = new Usuario();        
+
+      //  $usuario = new Usuario();        
         $usuario->setEmail($email);
         
         $hash = password_hash($clave, PASSWORD_BCRYPT);
         $usuario->setClave($hash);
-        
-        $conexion = ConexionDB::getConexion();
-        $daoUsuario= new UsuarioDAO($conexion);
+        //$usuario->setClave($clave);
+       // $conexion = ConexionDB::getConexion();
+       // $daoUsuario= new UsuarioDAO($conexion);
         
         return $daoUsuario->agregar($usuario); 
                        
