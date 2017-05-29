@@ -27,21 +27,21 @@ class UsuarioDAO implements GenericDAO {
 
     public function agregar($registro) {
        //validacion si ya esta 
-        $q= "SELECT * FROM usuarios WHERE email=:d_mail";
+        $q= "SELECT * FROM usuarios WHERE email=:d_email";
         
         $sent = $this -> conexion ->prepare($q);
         $v_mail = $registro->getEmail();
         $sent->bindParam(':d_email', $v_mail);
         
         $sendEx = $sent->execute();
-        echo "holas voy a mostrar sendEx";
-        echo $sendEx;
-        if(!is_null($q))
-        {
-            echo "usuario :mail ya esta registrado";
-            return 
-        }
         
+       
+        if($sendEx == true)
+        {
+            echo "usuario registrado con true";
+            return ;
+        }
+       
         /*@var $registro Usuario */
         
         $query = "INSERT INTO usuario (email, clave) VALUES (:email, :clave) ";

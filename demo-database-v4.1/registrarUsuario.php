@@ -12,7 +12,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
        if($exito) {
            header("location: index.php");
            return;
-       } 
+       } else {  echo '<script>alert("usuario ya registrado !!")</script>';}
+      
     }  
 }
 

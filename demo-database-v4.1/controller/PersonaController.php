@@ -13,6 +13,12 @@ class PersonaController {
     public static function listarPersonasRegistradas() {
         $conexion = ConexionDB::getConexion();
         $daoPersona = new PersonaDAO($conexion);
+
+         if($daoPersona->agregar($usuario) == false)
+        {
+            echo "usuario registrado";
+
+        }
         
         return $daoPersona->listarTodos();
     }
